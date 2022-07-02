@@ -1,9 +1,9 @@
+import emotionReset from 'emotion-reset'
 import { css, Global } from '@emotion/react'
 
 export const ResetCss = css`
-  body {
-    padding: 0;
-    margin: 0;
+  ${emotionReset}
+  * {
     box-sizing: border-box;
   }
 `

@@ -14,7 +14,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "pages/*": ["src/pages/*"],
+      "styles/*": ["src/styles/*"],
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"]
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
