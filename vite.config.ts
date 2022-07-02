@@ -22,6 +22,8 @@ export default defineConfig({
       components: path.resolve(__dirname, './src/components'),
       model: path.resolve(__dirname, './src/model'),
       constants: path.resolve(__dirname, './src/constants'),
+      hooks: path.resolve(__dirname, './src/hooks'),
+      utils: path.resolve(__dirname, './src/utils'),
     },
   },
 })

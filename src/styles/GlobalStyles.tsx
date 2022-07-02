@@ -6,6 +6,10 @@ export const ResetCss = css`
   * {
     box-sizing: border-box;
   }
+
+  strong {
+    font-weight: bolder;
+  }
 `
 
 function GlobalStyle() {

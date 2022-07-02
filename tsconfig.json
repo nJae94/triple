@@ -23,7 +23,9 @@
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
       "model/*": ["src/model/*"],
-      "constants/*": ["src/constants/*"]
+      "constants/*": ["src/constants/*"],
+      "hooks/*": ["src/hooks/*"],
+      "utils/*": ["src/utils/*"]
     }
   },
   "include": ["src"],
