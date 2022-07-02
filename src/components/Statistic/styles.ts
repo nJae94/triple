@@ -6,16 +6,10 @@ import { showAnimation } from 'styles/animation'
 import { BackgroundCoverBasic } from 'styles/common'
 
 export const Wrapper = styled.section`
-  width: 1040px;
+  min-width: 1200px;
   height: auto;
-
-  ${showAnimation({
-    name: 'bottomFadeIn',
-    duration: 700,
-    delay: 0,
-    mode: 'forwards',
-    timing: 'ease-out',
-  })}
+  margin: 0px auto;
+  position: relative;
 `
 
 export const InfoImg = styled.div`
@@ -31,6 +25,14 @@ export const InfoImg = styled.div`
   font-size: 15px;
   color: ${GRAY_700};
 
+  ${showAnimation({
+    name: 'bottomFadeIn',
+    duration: 700,
+    delay: 0,
+    mode: 'forwards',
+    timing: 'ease-out',
+  })}
+
   &::after {
     content: '2021년 12월 기준';
   }
@@ -39,4 +41,24 @@ export const InfoImg = styled.div`
 export const MetricContainer = styled.div`
   margin-left: 623px;
   padding-top: 150px;
+
+  ${showAnimation({
+    name: 'bottomFadeIn',
+    duration: 700,
+    delay: 100,
+    mode: 'forwards',
+    timing: 'ease-out',
+  })}
+`
+export const AwardContainer = styled.div`
+  margin: 50px 0px 140px 623px;
+  white-space: nowrap;
+
+  ${showAnimation({
+    name: 'bottomFadeIn',
+    duration: 700,
+    delay: 200,
+    mode: 'forwards',
+    timing: 'ease-out',
+  })}
 `
