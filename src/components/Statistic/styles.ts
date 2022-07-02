@@ -1,11 +1,20 @@
 import styled from '@emotion/styled'
 
 import InfoImage from 'assets/images/triple2x.png'
+import { showAnimation } from 'styles/animation'
 import { BackgroundCoverBasic } from 'styles/common'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   width: 1040px;
   height: auto;
+
+  ${showAnimation({
+    name: 'bottomFadeIn',
+    duration: 700,
+    delay: 0,
+    mode: 'forwards',
+    timing: 'ease-out',
+  })}
 `
 
 export const InfoImg = styled.div`
@@ -24,4 +33,9 @@ export const InfoImg = styled.div`
   &::after {
     content: '2021년 12월 기준';
   }
+`
+
+export const MetricContainer = styled.div`
+  margin-left: 623px;
+  padding-top: 150px;
 `
