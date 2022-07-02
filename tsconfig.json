@@ -22,7 +22,8 @@
       "styles/*": ["src/styles/*"],
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
-      "model/*": ["src/model/*"]
+      "model/*": ["src/model/*"],
+      "constants/*": ["src/constants/*"]
     }
   },
   "include": ["src"],

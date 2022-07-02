@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 
 import InfoImage from 'assets/images/triple2x.png'
+import { GRAY_700 } from 'constants/color'
 import { showAnimation } from 'styles/animation'
 import { BackgroundCoverBasic } from 'styles/common'
 
@@ -28,7 +29,7 @@ export const InfoImg = styled.div`
   background-image: url(${InfoImage});
   padding-top: 280px;
   font-size: 15px;
-  color: rgba(58, 58, 58, 0.7);
+  color: ${GRAY_700};
 
   &::after {
     content: '2021년 12월 기준';
