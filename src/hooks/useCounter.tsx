@@ -4,6 +4,7 @@ import { easeOutExpo } from 'utils/easeOutExpo'
 
 const ANIMATION_DURATION = 2000
 const FRAME_DURATION = 1000 / 60
+const totalFrame = Math.round(ANIMATION_DURATION / FRAME_DURATION)
 
 function useCounter(amount: number) {
   const count = useRef<HTMLSpanElement | null>(null)
@@ -12,7 +13,6 @@ function useCounter(amount: number) {
   useLayoutEffect(() => {
     const timer = setInterval(() => {
       currentFrame.current++
-      const totalFrame = Math.round(ANIMATION_DURATION / FRAME_DURATION)
       const nowProgress = currentFrame.current / totalFrame
       const easingProgress = easeOutExpo(nowProgress)
       const currentCount = Math.round(amount * easingProgress)
