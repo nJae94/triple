@@ -7,12 +7,14 @@ import AppleIcon from 'assets/images/badge-apple4x.png'
 import GoogleIcon from 'assets/images/play-store2x.png'
 import Metric from 'components/Statistic/Metric'
 import MetricData from 'constants/metric'
+import useObserver from 'hooks/useObserver'
 
 function Statistic() {
   const StatisticRef = useRef<HTMLElement>(null)
+  const observed = useObserver({ ref: StatisticRef })
 
   return (
-    <Styles.Wrapper ref={StatisticRef}>
+    <Styles.Wrapper ref={StatisticRef} observed={observed}>
       <Styles.InfoImg />
       <Styles.MetricContainer>
         {MetricData.map((item) => (

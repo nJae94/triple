@@ -1,3 +1,4 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
 import InfoImage from 'assets/images/triple2x.png'
@@ -5,12 +6,19 @@ import { GRAY_700 } from 'constants/color'
 import { showAnimation } from 'styles/animation'
 import { BackgroundCoverBasic } from 'styles/common'
 
-export const Wrapper = styled.section`
-  min-width: 1200px;
-  height: auto;
-  margin: 0px auto;
-  position: relative;
-`
+export const Wrapper = styled.section(
+  ({ observed }: { observed: boolean }) => css`
+    min-width: 1200px;
+    height: auto;
+    margin: 0px auto;
+    position: relative;
+
+    div {
+      visibility: ${observed ? 'visible' : 'hidden'};
+      animation-play-state: ${observed ? 'running' : 'paused'};
+    }
+  `,
+)
 
 export const InfoImg = styled.div`
   ${BackgroundCoverBasic};
