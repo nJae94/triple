@@ -5,7 +5,6 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <div style={{ backgroundColor: 'red', height: '3000px' }}>테스트</div>
       <Routes />
     </>
   )
