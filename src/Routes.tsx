@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes as AppRoutes, Route } from 'react-router-dom'
 
-import Intro from 'pages/intro'
+import Intro from 'pages/Intro'
 
 function Routes() {
   return (

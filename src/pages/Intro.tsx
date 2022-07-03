@@ -1,12 +1,10 @@
-import * as Styles from './styles'
-
 import Statistic from 'components/Statistic'
 
 function Intro() {
   return (
-    <Styles.Wrapper>
+    <main>
       <Statistic />
-    </Styles.Wrapper>
+    </main>
   )
 }
 
