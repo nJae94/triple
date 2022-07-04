@@ -2,7 +2,7 @@ import { render } from '@testing-library/react'
 
 import Award from '../src/components/Statistic/Award'
 
-test('Awarad', () => {
+test('Awarad 컴포넌트 테스트', () => {
   const { container } = render(
     <Award img="assets/images/play-store2x.png">
       2018 구글 플레이스토어

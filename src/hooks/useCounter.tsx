@@ -8,7 +8,7 @@ const totalFrame = Math.round(ANIMATION_DURATION / FRAME_DURATION)
 
 function useCounter(amount: number) {
   const count = useRef<HTMLSpanElement | null>(null)
-  const currentFrame = useRef(0)
+  const currentFrame = useRef<number>(0)
 
   useLayoutEffect(() => {
     const timer = setInterval(() => {
