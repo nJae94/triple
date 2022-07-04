@@ -10,6 +10,11 @@ npm / yarn test를 통한 테스트 확인
 
 ```
 
+## 배포
+> https://triple-tau.vercel.app/
+* vercel을 통한 배포 
+  - Vercel을 통해 프론트를 배포할 경우 main merge시 자동 배포 진행 및 pr 시 preview를 활용할 수 있다는 장점이 있습니다.
+
 ## 사용한 기술
 * TypeScript
 * React
@@ -49,7 +54,7 @@ npm / yarn test를 통한 테스트 확인
      ├── assets
      │      └─ images : 컴포넌트에서 활용할 image 폴더 
      ├── components : page를 구성하는 컴포넌트 폴더
-     │         └─ Statistic : 트리플(https://triple.guide/intro/) 홈페이지에서 볼수 있는 한 섹션과 관련된 │폴더입니다.주로 컴포넌트를 구성파는 파일이 100줄 정도 이상이 된다면 style파일을 따로 분리하고 있습니다.
+     │         └─ Statistic : 트리플(https://triple.guide/intro/) 홈페이지에서 볼수 있는 한 섹션과 관련된 폴더입니다.주로 컴포넌트를 구성파는 파일이 100줄 정도 이상이 된다면 style파일을 따로 분리하고 있습니다.
      │
      ├── constants : 주로 고정되어 변경될 가능성이 적은 공용 상수 폴더입니다.
      ├── hooks : Custom Hook 폴더입니다.
