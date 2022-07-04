@@ -1,10 +1,16 @@
+import styled from '@emotion/styled'
+
 import Statistic from 'components/Statistic'
+
+const Wrapper = styled.main`
+  display: flex;
+`
 
 function Intro() {
   return (
-    <main>
+    <Wrapper>
       <Statistic />
-    </main>
+    </Wrapper>
   )
 }
 
