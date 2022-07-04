@@ -6,6 +6,8 @@ npm / yarn install을 통해 라이브러리 설치
 
 npm / yarn dev를 통해 로컬 실행 확인
 
+npm / yarn test를 통한 테스트 확인
+
 ```
 
 ## 사용한 기술

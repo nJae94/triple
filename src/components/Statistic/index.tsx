@@ -11,7 +11,7 @@ import useObserver from 'hooks/useObserver'
 
 function Statistic() {
   const StatisticRef = useRef<HTMLElement>(null)
-  const observed = useObserver({ ref: StatisticRef })
+  const observed: boolean = useObserver({ ref: StatisticRef })
 
   return (
     <Styles.Wrapper ref={StatisticRef} observed={observed}>

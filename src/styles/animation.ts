@@ -1,6 +1,6 @@
 import { css, keyframes } from '@emotion/react'
 
-import { AnimationType, BottomFadeInProps } from 'model/style'
+import { AnimationType, BottomFadeInProps } from 'model/animation'
 
 const Animation: AnimationType = {
   bottomFadeIn: keyframes`
