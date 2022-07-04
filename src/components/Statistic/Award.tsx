@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
 
 import { GRAY_800 } from 'constants/color'
 
@@ -30,4 +30,4 @@ function Award({ img, children }: AwardProps) {
   return <Wrapper img={img}>{children}</Wrapper>
 }
 
-export default Award
+export default memo(Award, (prev, cur) => prev.img === cur.img)

@@ -15,6 +15,7 @@ function useCounter(amount: number) {
       currentFrame.current++
       const nowProgress = currentFrame.current / totalFrame
       const easingProgress = easeOutExpo(nowProgress)
+
       const currentCount = Math.round(amount * easingProgress)
 
       if (count.current) {

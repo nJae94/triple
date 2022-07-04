@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { memo } from 'react'
 
 import { GRAY } from 'constants/color'
 import useCounter from 'hooks/useCounter'
@@ -36,4 +37,7 @@ function Metric({ metric }: MetricProps) {
   )
 }
 
-export default Metric
+export default memo(
+  Metric,
+  (prev, cur) => JSON.stringify(prev) === JSON.stringify(cur),
+)
