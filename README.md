@@ -34,6 +34,7 @@ npm / yarn test를 통한 테스트 확인
 
 ## 요구사항
 - 문구, 이미지 레이아웃 스타일은 트리플 홈페이지와 동일 단, 반응현 고려하지 않으며 최소 화면폭 1200px 고정
+- 2초 동안 증가, 동시에 종료
 > min-width: 1200px;
 
 ## 구현 조건 및 해결 방법
@@ -66,3 +67,11 @@ npm / yarn test를 통한 테스트 확인
 
 ## 애매한 점
 - Metric 컴포넌트에서 사용되는 MetricData 서버데이터로 인지하고 Mock_data처럼 다뤄야할지 아니면 고정 상수로 생각해야될지 
+- setInterval로 60프레임으로 구현하였으나 [해당블로그](https://guiyomi.tistory.com/100)를 보고 기존로직을 유지하면서 requestAnimationFrame로 변경을 하였습니다.
+- requestAnimationFrame로 변경한 후 프레임에 대한 제어가 없어져 easeOutExpo의 효과가 나타나지 않았습니다. 추가적으로 검색결과 [해당사이트](https://spicyyoghurt.com/tools/easing-functions)의 function를 참조해 타이밍을 조절하였습니다.
+  ```
+  function easeOutExpo (t, b, c, d) {
+    return (t == d) ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+  }
+  ```
+- round를 사용하니 100인데이터가 먼저 끝나 동시에 끝나야한다는 조건에 부합하지 않아 floor로 변경하였으나 다른데이터에 비해 99가 조금 오래 머무는 문제점이 있습니다.

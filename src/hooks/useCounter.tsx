@@ -3,18 +3,19 @@ import { useLayoutEffect, useRef } from 'react'
 import { easeOutExpo } from 'utils/easeOutExpo'
 
 const ANIMATION_DURATION = 2000
-const FRAME_DURATION = 1000 / 60
-const totalFrame = Number((ANIMATION_DURATION / FRAME_DURATION).toFixed(3))
 
 function useCounter(amount: number) {
   const count = useRef<HTMLSpanElement | null>(null)
   const currentFrame = useRef<number>(0)
 
   useLayoutEffect(() => {
-    const timer = setInterval(() => {
+    let animationFramId = 0
+
+    const countUp = (timestamp: number) => {
       currentFrame.current++
-      const nowProgress = currentFrame.current / totalFrame
-      const easingProgress = easeOutExpo(nowProgress)
+      const easingProgress = Number(
+        easeOutExpo(timestamp, ANIMATION_DURATION).toFixed(3),
+      )
 
       const currentCount = Math.floor(amount * easingProgress)
 
@@ -22,13 +23,16 @@ function useCounter(amount: number) {
         count.current.textContent = `${currentCount}`
       }
 
+      animationFramId = requestAnimationFrame(countUp)
+
       if (currentCount === amount) {
-        clearInterval(timer)
+        cancelAnimationFrame(animationFramId)
       }
-    }, FRAME_DURATION)
+    }
+    requestAnimationFrame(countUp)
 
     return () => {
-      clearInterval(timer)
+      cancelAnimationFrame(animationFramId)
     }
   })
 

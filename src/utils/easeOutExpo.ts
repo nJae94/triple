@@ -1,3 +1,3 @@
-export function easeOutExpo(x: number): number {
-  return x === 1 ? 1 : 1 - Math.pow(2, -10 * x)
+export function easeOutExpo(time: number, duration: number): number {
+  return 1 - Math.pow(2, (-10 * time) / duration)
 }
