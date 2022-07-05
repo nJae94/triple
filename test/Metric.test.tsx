@@ -19,7 +19,7 @@ describe('Metric 컴포넌트 테스트', () => {
   }
 
   test('Metric 컴포넌트 일정 시간 후 Props로 내려받은 amount 표시', () => {
-    const { getByText } = render(<Metric metric={Mock} />)
+    const { getByText } = render(<Metric metric={Mock} observed />)
     renderHook(() => useCounter(Mock.amount, 2000))
 
     jest.runAllTimers()
