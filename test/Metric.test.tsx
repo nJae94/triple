@@ -18,7 +18,7 @@ describe('Metric 컴포넌트 테스트', () => {
     text: '여행자',
   }
 
-  test('Metric 컴포넌트 일정 시간 후 Props로 내려받은 amount 표시', async () => {
+  test('Metric 컴포넌트 일정 시간 후 Props로 내려받은 amount 표시', () => {
     const { getByText } = render(<Metric metric={Mock} />)
     renderHook(() => useCounter(Mock.amount))
 
