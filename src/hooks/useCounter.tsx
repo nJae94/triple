@@ -2,9 +2,7 @@ import { useLayoutEffect, useRef } from 'react'
 
 import { easeOutExpo } from 'utils/easeOutExpo'
 
-const ANIMATION_DURATION = 2000
-
-function useCounter(amount: number) {
+function useCounter(amount: number, duration: number) {
   const count = useRef<HTMLSpanElement | null>(null)
   const currentFrame = useRef<number>(0)
 
@@ -13,9 +11,7 @@ function useCounter(amount: number) {
 
     const countUp = (timestamp: number) => {
       currentFrame.current++
-      const easingProgress = Number(
-        easeOutExpo(timestamp, ANIMATION_DURATION).toFixed(3),
-      )
+      const easingProgress = Number(easeOutExpo(timestamp, duration).toFixed(3))
 
       const currentCount = Math.floor(amount * easingProgress)
 

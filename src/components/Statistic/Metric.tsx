@@ -22,7 +22,7 @@ interface MetricProps {
 
 function Metric({ metric }: MetricProps) {
   const { amount, amountUnit, text } = metric
-  const { count } = useCounter(amount)
+  const { count } = useCounter(amount, 2000)
 
   return (
     <Wrapper>
