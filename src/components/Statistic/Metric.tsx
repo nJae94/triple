@@ -18,11 +18,12 @@ const Text = styled.p`
 
 interface MetricProps {
   metric: MetricModal
+  observed: boolean
 }
 
-function Metric({ metric }: MetricProps) {
+function Metric({ metric, observed }: MetricProps) {
   const { amount, amountUnit, text } = metric
-  const { count } = useCounter(amount, 2000)
+  const { count } = useCounter(amount, 2000, observed)
 
   return (
     <Wrapper>

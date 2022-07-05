@@ -18,7 +18,7 @@ function Statistic() {
       <Styles.InfoImg />
       <Styles.MetricContainer>
         {MetricData.map((item) => (
-          <Metric key={item.id} metric={item} />
+          <Metric key={item.id} metric={item} observed={observed} />
         ))}
       </Styles.MetricContainer>
       <Styles.AwardContainer>
