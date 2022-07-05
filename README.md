@@ -75,3 +75,5 @@ npm / yarn test를 통한 테스트 확인
   }
   ```
 - round를 사용하니 100인데이터가 먼저 끝나 동시에 끝나야한다는 조건에 부합하지 않아 floor로 변경하였으나 다른데이터에 비해 99가 조금 오래 머무는 문제점이 있습니다.
+- requestAnimationFrame timestamp를 사용하니 컴포넌트가 마운트되지 않더라고 timestamp가 증가되고 있어 스크롤 후 observed가 되는 시점에는 이미 애니메이션이 종료되는 문제가 발생하여 timestamp를 사용하지 않고 계산하는 것으로 변경
+- observed를 글로벌 상태관리를 해야할까? 싶은 생각이 조금 생김
