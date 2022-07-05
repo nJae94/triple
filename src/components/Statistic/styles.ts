@@ -14,7 +14,6 @@ export const Wrapper = styled.section(
     position: relative;
 
     div {
-      visibility: ${observed ? 'visible' : 'hidden'};
       animation-play-state: ${observed ? 'running' : 'paused'};
     }
   `,
